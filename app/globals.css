@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #fff8ed;
+  color: #1a1410;
+}
+
+::selection {
+  background-color: #ffb800;
+  color: #1a1410;
+}
+
+/* Visible keyboard focus ring, everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container-px {
+  @apply px-5 sm:px-8 lg:px-12;
+}
+
+.section-pad {
+  @apply py-20 sm:py-28;
+}
+
+/* Sticker-style rotated price tag, echoes the printed menu's yellow price bubbles */
+.sticker {
+  @apply inline-flex items-center justify-center font-tag font-bold shadow-sticker;
+  border: 2.5px solid #1a1410;
+}
+
+/* Torn / scalloped edge divider between sections */
+.scallop-top {
+  position: relative;
+}
+.scallop-top::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 22px;
+  background-image: radial-gradient(circle at 10px 0, transparent 11px, currentColor 11.5px);
+  background-size: 22px 22px;
+  background-repeat: repeat-x;
+  transform: translateY(-100%);
+}

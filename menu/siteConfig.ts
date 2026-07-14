@@ -48,7 +48,7 @@ export const siteConfig = {
     title: "Pizza Saucy Lidher | Pizza, Broast, Burgers & Deals in Lahore",
     description:
       "Pizza Saucy in Lidher, Bedian Road, Lahore — loaded pizzas, injected broast, stacked burgers, wraps and family deals. Order on WhatsApp, delivery up to 6 KM.",
-    url: "https://pizzasaucy.com",
+    url: "https://pizza-saucy.vercel.app",
     ogImage: "/images/og-cover.jpg",
   },
 
